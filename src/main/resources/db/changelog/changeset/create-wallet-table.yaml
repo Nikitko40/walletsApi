@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-wallet-table
+      author: iskhakov
+      changes:
+        - createTable:
+            tableName: wallet
+            columns:
+              - column:
+                  name: id
+                  type: varchar
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: balance
+                  type: numeric(17,2)
+                  constraints:
+                    nullable: false
